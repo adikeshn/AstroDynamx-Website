@@ -1,0 +1,36 @@
+
+/* components css */
+
+.topBar {
+  display: flex;
+  background-color: black;
+  height: 11%;
+  align-items: center;
+}
+
+.topbarLogo {
+  height: 95%;
+  margin-left: 100px;
+}
+
+
+/* pages css */
+.screen {
+  height: 100%;
+  
+}
+
+.backgroundDiv {
+  height: 90%;
+  background-image: url('src/assets/RocketShipBackground.webp');
+  background-size: cover;
+}
+
+/* overarching css */
+
+html, body, #root {
+  height:100%;
+}
+
+
+
