@@ -4,8 +4,17 @@ import TopBar from "./components/TopBar";
 function LandingPage() {
   return (
     <div className="screen">
-      <TopBar />
-      <div className="backgroundDiv"></div>
+      <div className="backgroundDiv">
+        <TopBar />
+        <div className="landingDiv">
+          <h1 className="titleText">
+            Fueling Dreams with STEM Tutoring and Rocketry
+          </h1>
+          <div className="getStartedBox">
+            <h2 className="startedText">Get Started</h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

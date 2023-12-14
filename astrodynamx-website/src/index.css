@@ -2,28 +2,88 @@
 /* components css */
 
 .topBar {
+  
   display: flex;
-  background-color: black;
-  height: 11%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 15%;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.signInBox {
+  height: 55%;
+  background-color: aliceblue;
+  align-items: center;
+  display: flex;
+  border-radius: 10px
+}
+
+.signInText {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 25px;
+  color:gray;
+}
+
+.selectorStyle {
+  color:azure;
+  font-size: 25px;
+  font-weight:500;
+}
+
+.selectorDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+  height: 100%;
   align-items: center;
 }
 
 .topbarLogo {
-  height: 95%;
-  margin-left: 100px;
+  height: 90%;
+  margin-left: 80px;
 }
 
 
 /* pages css */
 .screen {
   height: 100%;
-  
+}
+
+.titleText {
+  font-size: 70px;
+  color: aliceblue;
+  font-weight: 500;
+  max-width: 60%;
+}
+
+.landingDiv {
+  padding: 100px;
 }
 
 .backgroundDiv {
-  height: 90%;
-  background-image: url('src/assets/RocketShipBackground.webp');
+  height: 100%;
+  background-image: url('src/assets/rocket-bg.jpeg');
   background-size: cover;
+}
+
+.getStartedBox {
+  background-color: aliceblue;
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  border-radius: 50px;
+}
+
+.startedText {
+  font-size: 28px;
+  font-weight: 500;
+  color:gray;
+  padding: 20px;
 }
 
 /* overarching css */
