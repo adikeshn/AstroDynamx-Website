@@ -1,14 +1,14 @@
-import "../index.css";
+import "../styleSheets/topBar.css";
 
-function TopBar() {
+function TopBar({ shown }) {
   return (
-    <div className="topBar">
+    <div className={shown ? "topBar" : "fadeOut"}>
       <img className="topbarLogo" src="src/assets/LogoSide2.png" />
       <div className="selectorDiv">
-        <span className="selectorStyle">Mission</span>
-        <span className="selectorStyle">Our Team</span>
-        <span className="selectorStyle">Get Involved</span>
-        <span className="selectorStyle">Contact Us</span>
+        <span className="hover-underline-animation">Mission</span>
+        <span className="hover-underline-animation">Our Team</span>
+        <span className="hover-underline-animation">Get Involved</span>
+        <span className="hover-underline-animation">Contact Us</span>
         <div className="signInBox">
           <span className="signInText">Sign In</span>
         </div>

@@ -1,0 +1,104 @@
+.hover-underline-animation {
+    position: relative;
+    text-decoration: none;
+    color:azure;
+    font-size: 1.6rem;
+    font-weight:500;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background-color:azure;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } 
+  
+  .topBar {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.25s linear;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .fadeOut {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+  }
+  
+  .signInBox {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    border-radius: 19px;
+    border-color: #e3e3e3;
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    transition: 0.25s;
+    
+  
+  }
+  
+  .signInBox:hover {
+    border-color: gray;
+    border-style: solid;
+    border-width: 2px;
+    background-color: gainsboro;
+  }
+  
+  
+  .getStartedBox:hover {
+    border-color: gray;
+    background-color: gainsboro;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .signInText {
+    font-size: 1.45rem;
+    font-weight: 500;
+    padding: 16px;
+    color:grey;
+  }
+  
+  .selectorDiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .topbarLogo {
+    height: 100%;
+    margin-left: 80px;
+  }
+  
+  
