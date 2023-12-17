@@ -13,9 +13,23 @@ function TopBar({ shown, mission, team, involve, contact, scrolltoSection }) {
         >
           Mission
         </div>
-        <span className="hover-underline-animation">Our Team</span>
+        <div
+          onClick={() => {
+            scrolltoSection(team);
+          }}
+          className="hover-underline-animation"
+        >
+          Our Team
+        </div>
         <span className="hover-underline-animation">Get Involved</span>
-        <span className="hover-underline-animation">Contact Us</span>
+        <div
+          onClick={() => {
+            contact(true);
+          }}
+          className="hover-underline-animation"
+        >
+          Contact Us
+        </div>
         <div className="signInBox">
           <span className="signInText">Sign In</span>
         </div>
