@@ -20,5 +20,5 @@
 .desc-text {
     font-size: 1rem;
     max-width: 70%;
-    max-height: 10%;
+    min-height: 25%;
 }

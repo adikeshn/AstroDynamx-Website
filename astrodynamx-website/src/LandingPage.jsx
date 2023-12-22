@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import React, { useState, useEffect, useRef } from "react";
 import Person from "./components/Person";
 import ContactUs from "./components/ContactUs";
+import BottomBar from "./components/BottomBar";
 
 function LandingPage() {
   const mission = useRef(null);
@@ -71,17 +72,19 @@ function LandingPage() {
         <div className="mission-text" data-aos="fade-up">
           <h1 className="mission-title">MISSION STATEMENT</h1>
           <p className="mission-desc">
-            At [Your Website/Company Name], our mission is to empower
-            individuals and businesses with the tools and knowledge they need to
-            thrive in an ever-evolving digital landscape. We are dedicated to
-            fostering innovation, promoting inclusivity, and delivering
-            exceptional value to our users.
+            Hey and welcome to AstroDynamX! We are a group of passionate high
+            school students working to create a rocket that will reach space and
+            make aerospace engineering more accessible to all. Doing this is
+            hard and we know it's hard, but that is what makes it fulfilling. In
+            a year when we have our rocket flying, you will thank yourself for
+            putting in the work.
           </p>
           <p className="mission-desc">
-            Through a commitment to excellence and a passion for continuous
-            improvement, we aim to be a trusted resource that inspires,
-            educates, and transforms the way our community engages with the
-            world.
+            Of course, we are very privileged, and it is important to give back
+            to our community. That is why we are also creating teaching
+            resources that will educate the next generation on STEM topics.
+            Hopefully you stick with us on our mission. We'd love to have your
+            help!
           </p>
         </div>
         <img className="earth-image" src="src/assets/earth.png" />
@@ -103,7 +106,7 @@ function LandingPage() {
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
               desc={
-                "He is god and I love him I love his hair and his presidential suits and shit like that pls come to my house fuck biden"
+                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
               }
             />
           </div>
@@ -119,7 +122,7 @@ function LandingPage() {
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
               desc={
-                "He is god and I love him I love his hair and his presidential suits and shit like that pls come to my house fuck biden"
+                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
               }
             />
           </div>
@@ -135,12 +138,14 @@ function LandingPage() {
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
               desc={
-                "He is god and I love him I love his hair and his presidential suits and shit like that pls come to my house fuck biden"
+                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
               }
             />
           </div>
         </div>
       </div>
+
+      <BottomBar />
     </div>
   );
 }
