@@ -10,7 +10,7 @@ import BottomBar from "./components/BottomBar";
 function LandingPage() {
   const mission = useRef(null);
   const team = useRef(null);
-  const involve = useRef(null);
+  const [showPopup, setShowPopup] = useState(false);
   const [showContact, setContact] = useState(false);
 
   const scrollToSection = (elementRef) => {
@@ -41,13 +41,20 @@ function LandingPage() {
     AOS.init();
   });
 
+  //Get involved top bar functionality
+  const handleScrollAndOpenPopup = () => {
+    const bottomBar = document.querySelector('.bottom-bar');
+    bottomBar.scrollIntoView({ behavior: 'smooth' });
+    setShowPopup(true);
+  };
+
   return (
     <div className="screen">
       <TopBar
         shown={show}
         mission={mission}
         team={team}
-        involve={involve}
+        involve={setShowPopup}
         contact={setContact}
         scrolltoSection={scrollToSection}
       />
@@ -99,14 +106,14 @@ function LandingPage() {
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
               desc={
-                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
               }
             />
             <Person
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
               desc={
-                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
               }
             />
           </div>
