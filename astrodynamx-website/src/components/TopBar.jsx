@@ -1,6 +1,6 @@
 import "../styleSheets/topBar.css";
 
-function TopBar({ shown, mission, team, involve, contact, scrolltoSection }) {
+function TopBar({ shown, mission, team, hamdleScrollAndOpenPopup, contact, scrolltoSection }) {
   return (
     <div className={shown ? "topBar" : "fadeOut"}>
       <img className="topbarLogo" src="src/assets/LogoSide2.png" />
@@ -21,7 +21,13 @@ function TopBar({ shown, mission, team, involve, contact, scrolltoSection }) {
         >
           Our Team
         </div>
-        <span className="hover-underline-animation">Get Involved</span>
+        <div 
+          onClick={
+            handleScrollAndOpenPopup
+          }
+          className="hover-underline-animation">
+          Get Involved
+        </div>
         <div
           onClick={() => {
             contact(true);
