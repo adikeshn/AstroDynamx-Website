@@ -1,7 +1,9 @@
 .margin-content {
   margin-top: 40px;
 }
-
+.bottom-d {
+  height: 8%;
+}
 .team-bg {
   background-image: #01111E;
   height: fit-content;

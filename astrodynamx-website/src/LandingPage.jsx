@@ -10,8 +10,8 @@ import BottomBar from "./components/BottomBar";
 function LandingPage() {
   const mission = useRef(null);
   const team = useRef(null);
-  const [showPopup, setShowPopup] = useState(false);
-  const [showContact, setContact] = useState(false);
+  const involved = useRef(null);
+  const [showContact, setShowContact] = useState(false);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -22,6 +22,7 @@ function LandingPage() {
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
       setShow(false);
@@ -41,25 +42,18 @@ function LandingPage() {
     AOS.init();
   });
 
-  //Get involved top bar functionality
-  const handleScrollAndOpenPopup = () => {
-    const bottomBar = document.querySelector('.bottom-bar');
-    bottomBar.scrollIntoView({ behavior: 'smooth' });
-    setShowPopup(true);
-  };
-
   return (
     <div className="screen">
       <TopBar
         shown={show}
         mission={mission}
         team={team}
-        involve={setShowPopup}
-        contact={setContact}
+        involved={involved}
+        contact={setShowContact}
         scrolltoSection={scrollToSection}
       />
 
-      <ContactUs showContact={showContact} setContact={setContact} />
+      <ContactUs showContact={showContact} setContact={setShowContact} />
 
       <div className="backgroundDiv">
         <div className="landingDiv">
@@ -151,8 +145,9 @@ function LandingPage() {
           </div>
         </div>
       </div>
-
-      <BottomBar />
+      <div className="bottom-d" ref={involved}>
+        <BottomBar />
+      </div>
     </div>
   );
 }
