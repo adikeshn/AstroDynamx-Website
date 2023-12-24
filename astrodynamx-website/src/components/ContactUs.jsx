@@ -1,7 +1,35 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../styleSheets/contactUs.css";
+import { useState } from "react";
 
 function ContactUs({ showContact, setContact }) {
+  const [status, setStatus] = useState("Submit");
+
+  const handleSubmit = (e) => {
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+    const details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    fetch("http://localhost:4000/nodemailer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(details),
+    })
+      .then((response) => {
+        alert("Successfully sent message!");
+      })
+      .catch((response) => {
+        e.preventDefault();
+        alert(response);
+      });
+    setStatus("Submit");
+  };
+
   return (
     <Offcanvas
       show={showContact}
@@ -19,18 +47,20 @@ function ContactUs({ showContact, setContact }) {
             If you have any questions regarding AstroDynamx, please type it in
             below, this message will be sent to example@gmail.com and we will
             get back to you.
-            <form className="offCanvas-form">
+            <form className="offCanvas-form" onSubmit={handleSubmit}>
               <label className="form-label">Name </label>
               <br />
-              <input className="small-input" type="text" name="name" /> <br />
+              <input className="small-input" type="text" id="name" /> <br />
               <label className="form-label">Email </label>
               <br />
-              <input className="small-input" type="text" name="email" /> <br />
+              <input className="small-input" type="text" id="email" /> <br />
               <label className="form-label">Message </label>
               <br />
-              <textarea className="large-input" type="text" name="message" />
+              <textarea className="large-input" type="text" id="message" />
               <br />
-              <input className="submit-button" type="submit" value="Submit" />
+              <button className="submit-button" type="submit">
+                {status}
+              </button>
             </form>
           </div>
         </Offcanvas.Body>
