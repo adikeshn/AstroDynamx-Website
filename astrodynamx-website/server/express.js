@@ -13,7 +13,7 @@ app.post("/nodemailer", (req, res) => {
             service: 'gmail',
             auth: {
                 user: "adiknathan09@gmail.com",
-                pass: process.env.APP_Password
+                pass: "iqvybkbahkeylpzn"
             }
         })
         const mail_options = {
