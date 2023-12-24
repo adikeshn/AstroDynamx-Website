@@ -7,13 +7,15 @@ function ContactUs({ showContact, setContact }) {
 
   const handleSubmit = (e) => {
     setStatus("Sending...");
+    e.preventDefault();
+
     const { name, email, message } = e.target.elements;
     const details = {
       name: name.value,
       email: email.value,
       message: message.value,
     };
-    fetch("http://localhost:4000/nodemailer", {
+    fetch("https://astrodynamx-backendservice.onrender.com/nodemailer", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +26,6 @@ function ContactUs({ showContact, setContact }) {
         alert("Successfully sent message!");
       })
       .catch((response) => {
-        e.preventDefault();
         alert(response);
       });
     setStatus("Submit");
