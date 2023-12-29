@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styleSheets/bottombar.css";
-import { RiInstagramLine } from "react-icons/ri";
+import { RiInstagramLine, RiLinkedinBoxLine } from "react-icons/ri";
 
 function BottomBar() {
   //This is for the get involved popup
@@ -60,15 +60,25 @@ function BottomBar() {
         )}
       </div>
       <div className="icon-div">
-        <div className="insta-icon">
-          <RiInstagramLine
-            size={46}
-            color="white"
-            onClick={() => {
-              window.open("https://www.instagram.com/astrodynamx/", "_blank");
-            }}
-          />
-        </div>
+        <RiInstagramLine
+          size={46}
+          color="white"
+          onClick={() => {
+            window.open("https://www.instagram.com/astrodynamx/", "_blank");
+          }}
+          className="icon-cursor"
+        />
+        <RiLinkedinBoxLine
+          size={46}
+          color="white"
+          className="icon-cursor"
+          onClick={() => {
+            window.open(
+              "https://www.linkedin.com/company/astrodynamx/about/?viewAsMember=true",
+              "_blank"
+            );
+          }}
+        />
       </div>
       <div className="space-corrcter"></div>
     </div>

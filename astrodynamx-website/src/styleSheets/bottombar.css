@@ -3,14 +3,20 @@
     background-color: rgb(20, 20, 20);
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.insta-icon{
+.icon-div {
+    position: absolute;
+    margin-left: 45%;
+    width: 10%;
+    align-self: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.icon-cursor{
     cursor: pointer;
-    align-items: center;
-    padding-right: 185px;
 }
 
 #popup-button {

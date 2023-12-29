@@ -33,7 +33,7 @@ app.post("/nodemailer", (req, res) => {
         })
     }
 
-    send_mail("adiknathan09@gmail.com");
+    send_mail(data.sendto);
 
     res.end()
 
