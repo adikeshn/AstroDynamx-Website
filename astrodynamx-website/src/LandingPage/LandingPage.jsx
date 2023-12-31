@@ -1,12 +1,11 @@
-import "./styleSheets/index.css";
-import TopBar from "./components/TopBar";
+import "./LandingPageStyles/index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useState, useEffect, useRef } from "react";
-import Person from "./components/Person";
-import ContactUs from "./components/ContactUs";
-import BottomBar from "./components/BottomBar";
-
+import Person from "./LandingPageComponents/Person";
+import ContactUs from "./LandingPageComponents/ContactUs";
+import BottomBar from "./LandingPageComponents/BottomBar";
+import TopBar from "./LandingPageComponents/TopBar";
 function LandingPage() {
   const mission = useRef(null);
   const team = useRef(null);

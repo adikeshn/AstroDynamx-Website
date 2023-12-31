@@ -1,4 +1,4 @@
-import "../styleSheets/person.css";
+import "../LandingPageStyles/person.css";
 
 function Person({ name, uri, desc }) {
   return (

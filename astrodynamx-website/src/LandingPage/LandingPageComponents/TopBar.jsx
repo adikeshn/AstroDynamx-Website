@@ -1,4 +1,5 @@
-import "../styleSheets/topBar.css";
+import "../LandingPageStyles/topBar.css";
+import { Link } from "react-router-dom";
 
 function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
   return (
@@ -38,7 +39,9 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
           Contact Us
         </div>
         <div className="signInBox">
-          <span className="signInText">Sign In</span>
+          <Link to="/login" className="signInText">
+            Sign In
+          </Link>
         </div>
       </div>
     </div>

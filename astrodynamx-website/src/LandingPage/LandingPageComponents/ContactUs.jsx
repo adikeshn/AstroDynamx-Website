@@ -1,5 +1,5 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
-import "../styleSheets/contactUs.css";
+import "../LandingPageStyles/contactUs.css";
 import { useState } from "react";
 
 function ContactUs({ showContact, setContact }) {

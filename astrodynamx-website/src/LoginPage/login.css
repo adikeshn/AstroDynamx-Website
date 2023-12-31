@@ -1,0 +1,45 @@
+.login-container {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+  
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+  
+.form-group {
+  margin-bottom: 15px;
+}
+  
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+  
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  }
+  
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.LoginMain {
+    background-color:black;
+}

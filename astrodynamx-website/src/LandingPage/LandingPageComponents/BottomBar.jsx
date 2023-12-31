@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styleSheets/bottombar.css";
+import "../LandingPageStyles/bottombar.css";
 import { RiInstagramLine, RiLinkedinBoxLine } from "react-icons/ri";
 
 function BottomBar() {
