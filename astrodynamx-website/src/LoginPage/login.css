@@ -74,8 +74,8 @@ input {
   background: none;
   color: white;
   border-radius: 5px;
-  border: thin solid #888;
-  box-shadow: 1px 1px 1px grey;
+  border: none;
+  box-shadow: none;
   white-space: nowrap;
   cursor: pointer;
 }
