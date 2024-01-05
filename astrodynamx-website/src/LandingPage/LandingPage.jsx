@@ -6,6 +6,9 @@ import Person from "./LandingPageComponents/Person";
 import ContactUs from "./LandingPageComponents/ContactUs";
 import BottomBar from "./LandingPageComponents/BottomBar";
 import TopBar from "./LandingPageComponents/TopBar";
+import SignUp from "../LoginPage/SignUp";
+import { Link } from "react-router-dom";
+
 function LandingPage() {
   const mission = useRef(null);
   const team = useRef(null);
@@ -61,7 +64,9 @@ function LandingPage() {
           </h1>
           <div className="startedDiv">
             <div className="getStartedBox">
-              <h2 className="startedText">Get Started</h2>
+              <Link to="/signup">
+                <h2 className="startedText">Get Started</h2>
+              </Link>
             </div>
           </div>
         </div>

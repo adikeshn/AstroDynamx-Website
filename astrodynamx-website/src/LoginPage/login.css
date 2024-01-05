@@ -1,15 +1,23 @@
+.outsideClass {
+  background-color: #252525;
+}
 .login-container {
-  width: 350px;
-  margin: 50px auto;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 400px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: white;
+
+  background-color: black;
+  color: white;
+  font-weight: 200;
 }
   
 .login-container h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   color: white;
 }
@@ -21,14 +29,15 @@
 .form-group label {
   display: block;
   margin-bottom: 5px;
+  font-size: 25px;
 }
   
 .form-group input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: 1px solid #5a5a5a;
   box-sizing: border-box;
+  background-color: #191919;
   }
   
 button[type="submit"] {
@@ -38,8 +47,62 @@ button[type="submit"] {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  width: 500px;
 }
 
-.LoginMain {
-    background-color:black;
+.logInButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  background-color: #333333;
+  color: white;
+}
+
+.ForgotPassword {
+  padding-top: 10px;
+  font-size:17.5px;
+  text-align: center;
+}
+
+.customBtn {
+  margin-left: 18%;
+  display: inline-block;
+  vertical-align: center;
+  background: none;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+span.buttonText {
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrongPage {
+  font-size: 17.5px;
+  text-align: center;
+}
+.error {
+  font-size: 15px;
+  color: lightgreen;
 }
