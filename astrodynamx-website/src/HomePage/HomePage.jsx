@@ -1,21 +1,15 @@
 import React, { useState } from "react";
 import FirebaseInfo from "../../firebase-config";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function HomePage() {
+  const navigate = useNavigate();
+
   const signout = async () => {
     await FirebaseInfo.auth.signOut();
-    redirect("http://localhost:5173/");
+    navigate("/");
   };
 
-  return (
-    <button
-      onClick={() => {
-        signout();
-      }}
-    >
-      hello world
-    </button>
-  );
+  return <button onClick={signout}>hello world</button>;
 }
 
 export default HomePage;
