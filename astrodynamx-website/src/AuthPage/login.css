@@ -1,6 +1,13 @@
 .outsideClass {
   background-color: #252525;
 }
+
+.errText {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
 .login-container {
   margin: 0;
   position: absolute;

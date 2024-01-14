@@ -4,6 +4,8 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.json({ limit: '1mb' }))
 app.use(cors())
+
+
 app.post("/nodemailer", (req, res) => {
     const data = req.body
     const nodemailer = require("nodemailer")
