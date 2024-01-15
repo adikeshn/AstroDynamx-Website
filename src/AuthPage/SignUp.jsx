@@ -99,7 +99,7 @@ function SignUp() {
           <br />
           <div className="GoogleGPlusSignIn">
             <div className="customBtn">
-              <img className="icon" src="src/assets/GoogleLogo2.png" />
+              <img className="icon" src="GoogleLogo2.png" />
               <span className="buttonText"> Sign up with Google</span>
             </div>
           </div>

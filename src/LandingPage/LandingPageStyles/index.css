@@ -72,7 +72,7 @@
 
 .mission-bg {
   height: 100%;
-  background-image: url('src/assets/stars-bg2.jpeg');
+  background-image: url('stars-bg2.jpeg');
   background-size: cover;
   display: flex;
   align-items: start;
@@ -102,7 +102,7 @@
 
 .backgroundDiv {
   height: 100%;
-  background-image: url('src/assets/rocket-bg.jpeg');
+  background-image: url('rocket-bg.jpeg');
   background-size: cover;
   display: flex;
   align-items: center;
