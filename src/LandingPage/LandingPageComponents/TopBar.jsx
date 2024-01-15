@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
   return (
     <div className={shown ? "topBar" : "fadeOut"}>
-      <img className="topbarLogo" src="assets/LogoSide2.png" />
+      <img className="topbarLogo" src="LogoSide2.png" />
       <div className="selectorDiv">
         <div
           onClick={() => {
