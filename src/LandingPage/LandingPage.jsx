@@ -106,7 +106,7 @@ function LandingPage() {
             help!
           </p>
         </div>
-        <img className="earth-image" src="src/assets/earth.png" />
+        <img className="earth-image" src="earth.png" />
       </div>
       <div className="separator2" />
 
