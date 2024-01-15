@@ -1,9 +1,10 @@
-.margin-content {
-  margin-top: 40px;
-}
 .bottom-d {
   height: 8%;
 }
+.margin-content {
+  margin-top: 40px;
+}
+
 .team-bg {
   background-image: #01111E;
   height: fit-content;
@@ -149,10 +150,106 @@
 
 }
 
+.earth-image {
+  width: 30%;
+}
+
 /* overarching css */
 
 html, body, #root {
   height:100%;
   background-color: black;
   font-size: larger;
+}
+
+@media all and (max-width: 1000px) {
+  .titleText {
+    font-size: 2.2rem;
+    color: aliceblue;
+    font-weight: 500;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .landingDiv {
+    padding: 30px;
+  }
+  .backgroundDiv {
+    height: 100%;
+    background-image: url('../../../public/rocket-bg.jpeg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+  }
+
+  .mission-title {
+    font-size: 2.9rem;
+  }
+  
+  .mission-desc {
+    font-size: 0.9rem;
+    max-width: 90%;
+  
+  }
+  .earth-image {
+    width: 0%;
+  }
+  
+  .mission-bg {
+    height: 105%;
+    background-image: url('../../../public/stars-bg2.jpeg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .mission-text {
+  color: white;
+  text-align: left;
+  max-width: 90%;
+
+  align-self: center;
+  margin-right: 0px; 
+  margin-top: 20px;
+  max-height: 55%;
+}
+.margin-content {
+  margin-top: 40px;
+}
+
+.team-bg {
+  height:max-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+.team-title {
+  font-size: 4.3rem;
+  color: white;
+  font-weight:500;
+}
+
+.team-row {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: fit-content;
+  justify-content: space-evenly;
+
+}
+
+.bottom-d {
+  height: 10%;
+}
+
+
 }

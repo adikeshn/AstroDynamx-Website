@@ -19,10 +19,17 @@
     cursor: pointer;
 }
 
+.get-involved-text{
+    font-size: 3.6vmin;
+    text-decoration: underline;
+}
+
 #popup-button {
     background-color: transparent;
     color: white;
     border: none;
+    align-items: center;
+    justify-content: center;
     float: left;
     padding-left: 50px;
 }
@@ -49,4 +56,27 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
+}
+
+@media all and (max-width: 1000px) {
+
+.get-involved-text{
+    font-size: 5vmin;
+}
+.icon-div {
+    width: 20%;
+    margin-left: 50%;
+
+}
+
+#popup-button {
+    margin-bottom: 10px;
+}
+
+.bottom-div {
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
 }

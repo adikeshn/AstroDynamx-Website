@@ -40,7 +40,7 @@ function BottomBar() {
     <div className="bottom-div">
       <div className="get-involved">
         <button id="popup-button" onClick={handleShowPopup}>
-          <u>Get Involved</u>
+          <span className="get-involved-text">Get Involved</span>
         </button>
         {showPopup && (
           <div className="popup">

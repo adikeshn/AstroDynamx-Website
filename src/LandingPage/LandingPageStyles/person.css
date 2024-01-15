@@ -10,7 +10,7 @@
 
 .profile-img {
     border-radius: 30px;
-    height: 50%;
+    height: 250px;
 }
 
 .name-text {
@@ -21,4 +21,25 @@
     font-size: 1rem;
     max-width: 70%;
     min-height: 25%;
+}
+
+@media all and (max-width: 1000px) {
+
+    .person-div {
+        margin-bottom: 50px;
+        width: 85%;
+    }
+
+    .name-text {
+        font-size: 2.2rem;
+        margin-top: 10px;
+    }
+    
+    .desc-text {
+        font-size: 1rem;
+        max-width: 100%;
+        min-height: 25%;
+        margin-top: 10px;
+    }
+
 }
