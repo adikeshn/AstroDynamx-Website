@@ -1,14 +1,13 @@
 .hover-underline-animation {
     position: relative;
     text-decoration: none;
-    color:azure;
+    color: azure;
     font-size: 1.6rem;
-    font-weight:500;
+    font-weight: 500;
     cursor: pointer;
+}
 
-  }
-  
-  .hover-underline-animation::after {
+.hover-underline-animation::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -16,18 +15,17 @@
     height: 2.5px;
     bottom: 0;
     left: 0;
-    background-color:azure;
+    background-color: azure;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
-  
-  
-  .hover-underline-animation:hover::after {
+}
+
+.hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  } 
-  
-  .topBar {
+}
+
+.topBar {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.25s linear;
@@ -39,9 +37,9 @@
     height: 10%;
     width: 100%;
     margin-top: 10px;
-  }
-  
-  .fadeOut {
+}
+
+.fadeOut {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -52,9 +50,9 @@
     margin-top: 10px;
     opacity: 0;
     transition: opacity 0.25s linear;
-  }
-  
-  .signInBox {
+}
+
+.signInBox {
     height: 40px;
     align-items: center;
     display: flex;
@@ -65,39 +63,71 @@
     background-color: white;
     transition: 0.25s;
     cursor: pointer;
-    
-  
-  }
-  
-  .signInBox:hover {
+}
+
+.signInBox:hover {
     border-color: gray;
     border-style: solid;
     border-width: 2px;
     background-color: gainsboro;
-  }
-  
-  
-  
-  
-  .signInText {
+}
+
+.signInText {
     font-size: 1.45rem;
     font-weight: 500;
     padding: 16px;
-    color:grey;
+    color: grey;
     text-decoration: none;
-  }
-  
-  .selectorDiv {
+}
+
+.selectorDiv {
     display: flex;
     justify-content: space-evenly;
     width: 75%;
     height: 100%;
     align-items: center;
-  }
-  
-  .topbarLogo {
+}
+
+.topbarLogo {
     height: 100%;
     margin-left: 80px;
-  }
-  
-  
+}
+
+.hamburger-icon {
+    padding: 10px;
+    position: absolute;
+    background-color: black;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.offcanvas {
+    background-color: black;
+}
+
+.menuIcon {
+    justify-self: flex-end;
+}
+
+@media all and (max-width: 1000px) {
+    .fadeOut {
+        visibility: hidden;
+    }
+    .topBar {
+        visibility: hidden;
+    }
+    .hamburger-icon {
+        visibility: visible;
+    }
+    .selectorDiv {
+        flex-direction: column;
+    }
+    .topbarLogo2 {
+        width: 28%;
+        align-self: center;
+        margin-left: 35%;
+    }
+}
