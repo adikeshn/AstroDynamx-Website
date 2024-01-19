@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
-import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import FirebaseInfo from "../../firebase-config";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +15,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [err, seterr] = useState("");
   const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +33,31 @@ function Login() {
 
     // Send login data to backend for authentication
     console.log("Username:", username, "Password:", password);
+  };
+
+  const googleSignin = () => {
+    signInWithPopup(FirebaseInfo.auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        console.log(user);
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        console.log(credential);
+        // ...
+      });
   };
 
   useEffect(() => {
@@ -68,13 +99,11 @@ function Login() {
           </div>
         </form>
         <div className="ForgotPassword">
-          <p>
-            <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared">
-              Forgot password?
-            </a>
-          </p>
+          <Link to="/forgotpw">
+            <p>Forgot password?</p>
+          </Link>
         </div>
-        <div className="GoogleButton">
+        <div className="GoogleButton" onClick={googleSignin}>
           <div className="GoogleGPlusSignIn">
             <div className="customBtn">
               <img className="icon" src="GoogleLogo2.png" />

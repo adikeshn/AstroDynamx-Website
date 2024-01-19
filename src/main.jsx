@@ -6,6 +6,7 @@ import Login from "./AuthPage/Login.jsx";
 import LandingPage from "./LandingPage/LandingPage.jsx";
 import SignUp from "./AuthPage/SignUp.jsx";
 import HomePage from "./HomePage/HomePage.jsx";
+import ForgotPw from "./AuthPage/ForgotPw.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <HomePage />,
+  },
+  {
+    path: "/forgotpw",
+    element: <ForgotPw />,
   },
 ]);
 
