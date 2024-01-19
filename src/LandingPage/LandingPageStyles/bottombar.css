@@ -24,6 +24,10 @@
     text-decoration: underline;
 }
 
+.involved-text {
+    font-size: 75%;
+}
+
 #popup-button {
     background-color: transparent;
     color: white;
