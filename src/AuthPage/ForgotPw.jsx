@@ -16,6 +16,7 @@ function ForgotPw() {
     sendPasswordResetEmail(FirebaseInfo.auth, username)
       .then(() => {
         alert("Email sent to " + username);
+        navigate("/login");
       })
       .catch((err) => {
         seterr(err);
