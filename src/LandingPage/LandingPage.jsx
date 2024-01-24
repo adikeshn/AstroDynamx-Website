@@ -6,10 +6,9 @@ import Person from "./LandingPageComponents/Person";
 import ContactUs from "./LandingPageComponents/ContactUs";
 import BottomBar from "./LandingPageComponents/BottomBar";
 import TopBar from "./LandingPageComponents/TopBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import FirebaseInfo from "../../firebase-config";
-import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
   const mission = useRef(null);
@@ -44,8 +43,8 @@ function LandingPage() {
   }, [lastScrollY]);
 
   useEffect(() => {
-    const moniterAuthState = async () => {
-      await onAuthStateChanged(FirebaseInfo.auth, (users) => {
+    const moniterAuthState = () => {
+      onAuthStateChanged(FirebaseInfo.auth, (users) => {
         if (users) {
           navigate("/home");
         }
@@ -106,7 +105,7 @@ function LandingPage() {
             help!
           </p>
         </div>
-        <img className="earth-image" src="earth.png" />
+        <img className="earth-image" src="earth.png" alt="" />
       </div>
       <div className="separator2" />
 

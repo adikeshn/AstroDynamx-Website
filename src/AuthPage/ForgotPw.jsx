@@ -12,10 +12,10 @@ function ForgotPw() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(username);
     sendPasswordResetEmail(FirebaseInfo.auth, username)
       .then(() => {
         alert("Email sent to " + username);
+        navigate("/login");
       })
       .catch((err) => {
         seterr(err);

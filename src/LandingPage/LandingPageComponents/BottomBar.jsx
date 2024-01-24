@@ -11,11 +11,10 @@ function BottomBar() {
   const handleClosePopup = (event) => {
     // Close the popup only if the click is outside the popup or the show button
     if (
-      !event.target.closest(".popup") &&
-      !event.target.closest("#popup-button")
+      (!event.target.closest(".popup") &&
+        !event.target.closest("#popup-button")) ||
+      event.target.closest("#close-button")
     ) {
-      setShowPopup(false);
-    } else if (event.target.closest("#close-button")) {
       setShowPopup(false);
     }
   };

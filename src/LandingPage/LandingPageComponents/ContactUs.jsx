@@ -55,7 +55,9 @@ function ContactUs({ showContact, setContact }) {
             below, this message will be sent to astrodynamx@gmail.com and we
             will get back to you.
             <form className="offCanvas-form" onSubmit={handleSubmit}>
-              <label className="form-label">Name </label>
+              <label id="name" className="form-label">
+                Name
+              </label>
               <br />
               <input
                 className="small-input"

@@ -20,14 +20,15 @@
   font-size: 4.3rem;
   color: white;
   font-weight:500;
+  margin-bottom: 30px;
 }
 
 .team-row {
   flex-direction: row;
   display: flex;
-  height: 30vw;
+  height: fit-content;
   justify-content: space-evenly;
-  margin-top: 35px;
+  margin-bottom: 50px;
 
 }
 
@@ -151,7 +152,7 @@
 }
 
 .earth-image {
-  width: 30%;
+  height: 30%;
 }
 
 /* overarching css */
@@ -167,7 +168,7 @@ html, body, #root {
     font-size: 2.2rem;
     color: aliceblue;
     font-weight: 500;
-    max-width: 100%;
+    max-width: 95%;
     margin-bottom: 20px;
   }
   .landingDiv {

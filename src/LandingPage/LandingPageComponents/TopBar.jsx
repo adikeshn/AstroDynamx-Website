@@ -11,49 +11,55 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
     setIsSidebarCollapsed(!isSidebarCollapsed);
   };
 
+  const bar = () => {
+    return (
+      <div className="selectorDiv">
+        <div
+          onClick={() => {
+            scrolltoSection(mission);
+          }}
+          className="hover-underline-animation"
+        >
+          Mission
+        </div>
+        <div
+          onClick={() => {
+            scrolltoSection(team);
+          }}
+          className="hover-underline-animation"
+        >
+          Our Team
+        </div>
+        <div
+          onClick={() => {
+            scrolltoSection(involved);
+          }}
+          className="hover-underline-animation"
+        >
+          Get Involved
+        </div>
+        <div
+          onClick={() => {
+            contact(true);
+          }}
+          className="hover-underline-animation"
+        >
+          Contact Us
+        </div>
+        <div className="signInBox">
+          <Link to="/login" className="signInText">
+            Sign In
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className={shown ? "topBar" : "fadeOut"}>
         <img className="topbarLogo" src="LogoSide2.png" />
-        <div className="selectorDiv">
-          <div
-            onClick={() => {
-              scrolltoSection(mission);
-            }}
-            className="hover-underline-animation"
-          >
-            Mission
-          </div>
-          <div
-            onClick={() => {
-              scrolltoSection(team);
-            }}
-            className="hover-underline-animation"
-          >
-            Our Team
-          </div>
-          <div
-            onClick={() => {
-              scrolltoSection(involved);
-            }}
-            className="hover-underline-animation"
-          >
-            Get Involved
-          </div>
-          <div
-            onClick={() => {
-              contact(true);
-            }}
-            className="hover-underline-animation"
-          >
-            Contact Us
-          </div>
-          <div className="signInBox">
-            <Link to="/login" className="signInText">
-              Sign In
-            </Link>
-          </div>
-        </div>
+        {bar()}
       </div>
       <div className="hamburger-icon">
         <img className="topbarLogo2" src="LogoSide2.png" />
@@ -75,50 +81,7 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
         }}
       >
         <Offcanvas.Header closeButton closeVariant="white"></Offcanvas.Header>
-        <div className="selectorDiv">
-          {/* Sidebar links and content */}
-          <div
-            onClick={() => {
-              scrolltoSection(mission);
-              toggleSidebar(); // Close after scrolling
-            }}
-            className="hover-underline-animation"
-          >
-            Mission
-          </div>
-          <div
-            onClick={() => {
-              scrolltoSection(team);
-              toggleSidebar();
-            }}
-            className="hover-underline-animation"
-          >
-            Our Team
-          </div>
-          <div
-            onClick={() => {
-              scrolltoSection(involved);
-              toggleSidebar();
-            }}
-            className="hover-underline-animation"
-          >
-            Get Involved
-          </div>
-          <div
-            onClick={() => {
-              contact(true);
-              toggleSidebar();
-            }}
-            className="hover-underline-animation"
-          >
-            Contact Us
-          </div>
-          <div className="signInBox">
-            <Link to="/login" className="signInText">
-              Sign In
-            </Link>
-          </div>
-        </div>
+        {bar()}
       </Offcanvas>
     </>
   );

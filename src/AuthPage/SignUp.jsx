@@ -14,32 +14,22 @@ function SignUp() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); // Import here
+  const [errorMessage, setErrorMessage] = useState("");
   const provider = new GoogleAuthProvider();
   const navigate = useNavigate();
 
   const googleSignUp = () => {
     signInWithPopup(FirebaseInfo.auth, provider)
       .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
-        // The signed-in user info.
         const user = result.user;
-        console.log(user);
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
       })
       .catch((error) => {
-        // Handle Errors here.
         const errorCode = error.code;
         setErrorMessage(error.message);
-        // The email of the user's account used.
         const email = error.customData.email;
-        // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
-        console.log(credential);
-        // ...
       });
   };
 
@@ -52,11 +42,7 @@ function SignUp() {
 
     await createUserWithEmailAndPassword(FirebaseInfo.auth, username, password)
       .then(async (userCredential) => {
-        await signInWithEmailAndPassword(
-          FirebaseInfo.auth,
-          username,
-          password
-        ).then((userCreds) => {});
+        await signInWithEmailAndPassword(FirebaseInfo.auth, username, password);
       })
       .catch((error) => {
         error.code == "auth/email-already-in-use"
@@ -68,11 +54,6 @@ function SignUp() {
         setPassword("");
         setVerifyPassword("");
       });
-
-    // Passwords match and are valid, proceed with submission
-    console.log("Username:", username, "Password:", password);
-    // Send login data to backend for authentication
-    //e.target.reset();
   };
 
   useEffect(() => {
