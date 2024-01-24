@@ -44,14 +44,10 @@ function BottomBar() {
         {showPopup && (
           <div className="popup">
             <h2>Join Us!</h2>
-            <p>
-              Click
-              <a href="https://discord.gg/BK5bTCpvRD" target="blank">
-                {" "}
-                here{" "}
-              </a>
-              to join our discord!
-            </p>
+            <div className="involved-text">
+              Send your resume to 
+              <a href="mailto:astrodynamx@gmail.com?subject=Applicaton"> astrodynamx@gmail.com!</a>
+            </div>
             <button id="close-button" onClick={handleClosePopup}>
               &times;
             </button>

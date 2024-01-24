@@ -7,6 +7,8 @@ import LandingPage from "./LandingPage/LandingPage.jsx";
 import SignUp from "./AuthPage/SignUp.jsx";
 import HomePage from "./HomePage/HomePage.jsx";
 import ForgotPw from "./AuthPage/ForgotPw.jsx";
+import HPBlog from "./HomePage/HomePageComponents/HPBlog.jsx";
+import HPForum from "./HomePage/HomePageComponents/HPForum.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
   {
     path: "/forgotpw",
     element: <ForgotPw />,
+  },
+  {
+    path: "/home/blog",
+    element: <HPBlog />,
+  },
+  {
+    path: "/home/forum",
+    element: <HPForum />,
   },
 ]);
 

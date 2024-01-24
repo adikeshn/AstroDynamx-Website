@@ -1,0 +1,35 @@
+.top-screen {
+    height: 6vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    border-bottom: solid 1px white;
+}
+
+.text {
+    color: white;
+    border-right: solid 1px white;
+    padding-right: 8px;
+}
+
+.classes {
+    margin-left: .5vw;
+}
+
+.other {
+    padding-left: 8px;
+}
+
+.logout-button {
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+}
+
+.logout-button button {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
