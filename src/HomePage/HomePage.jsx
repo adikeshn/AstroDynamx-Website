@@ -9,16 +9,19 @@ function HomePage() {
 
   return (
     <div className="outside-class">
-      <HPTopBar />
-      <div className="add-class-box">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeer3eGO5dAdOpEoN02hY01ZdAjjIjr6XrIWtWIx4MtrV4k6g/viewform?usp=sf_link" target="_blank">
-          <div className="add-class">
-            Join a class
+      <div className="inside-class">
+        <HPTopBar />
+        <div className="add-class-box">
+          <div className="add-class-text">
+            Taking off your STEM education is one click away! 
           </div>
-          <img src="AddClassIcon.png" className="class-img" />
-        </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeer3eGO5dAdOpEoN02hY01ZdAjjIjr6XrIWtWIx4MtrV4k6g/viewform?usp=sf_link" target="_blank">
+            <div className="add-class-button">
+              <button>Start Learning</button>
+            </div>
+          </a>
+        </div>
       </div>
-      
     </div>
   );
 

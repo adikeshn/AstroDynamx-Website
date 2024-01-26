@@ -1,17 +1,43 @@
 .top-screen {
-    height: 6vh;
+    height: 20vh;
     width: 100vw;
+    color: white;
+    border-bottom: solid 1px white;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+}
+
+.links-class {
+    display: flex;
+    flex-direction: row;
+
+    width: fit-content;
+    font-size: 90%;
+    position: absolute;
+    bottom: 1vh;
+    left: 0.5vw;
+}
+
+.top-row-class {
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: white;
-    border-bottom: solid 1px white;
+    margin-left: .5vh;
+    margin-top: .9vh;
+}
+
+.my-account-class {
+    position: absolute;
+    top: .5vh;
+    right: .5vw;
 }
 
 .text {
     color: white;
-    border-right: solid 1px white;
-    padding-right: 8px;
+    padding-right: 1vw;
+
+    
 }
 
 .classes {
@@ -23,9 +49,6 @@
 }
 
 .logout-button {
-    position: absolute;
-    top: 1vh;
-    right: 1vw;
 }
 
 .logout-button button {

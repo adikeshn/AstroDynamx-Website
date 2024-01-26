@@ -13,6 +13,15 @@ function HPTopBar() {
 
   return (
     <div className="top-screen">
+      <div className="top-row-class">
+        <div className="hello-text">
+          <h1>Hello Person<br /></h1>
+        </div>
+        <div className="my-account-class">
+          My Account
+        </div>
+      </div>
+      <div className="links-class">
         <Link to="/home">
           <div className="text">
             <div className="classes">Classes</div>
@@ -28,12 +37,13 @@ function HPTopBar() {
             <div className="other">Forum</div>
           </div>
         </Link>
-        <div className="logout-button">
-          <button onClick={signout}>Log out</button>
-        </div>
+      </div>
     </div>
   );
 }
 
 export default HPTopBar;
 //&nbsp;|&nbsp;
+      //<div className="logout-button">
+        //<button onClick={signout}>Log out</button>
+      //</div>
