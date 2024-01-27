@@ -1,0 +1,115 @@
+.outsideClass {
+  background-color: #252525;
+}
+
+.errText {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+
+  background-color: black;
+  color: white;
+  font-weight: 200;
+}
+
+.login-container h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 25px;
+  }
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #5a5a5a;
+  box-sizing: border-box;
+  background-color: #191919;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 500px;
+}
+
+.logInButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  background-color: #333333;
+  color: white;
+}
+
+.ForgotPassword {
+  padding-top: 10px;
+  font-size: 17.5px;
+  text-align: center;
+}
+
+.customBtn {
+  margin-left: 18%;
+  display: inline-block;
+  vertical-align: center;
+  background: none;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+span.buttonText {
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: "Roboto", sans-serif;
+}
+
+.wrongPage {
+  font-size: 17.5px;
+  text-align: center;
+}
+.error {
+  font-size: 15px;
+  color: lightgreen;
+}

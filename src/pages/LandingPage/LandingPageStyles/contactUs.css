@@ -1,0 +1,40 @@
+.offCanvas-bg {
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    height: 100%;
+  }
+
+.offCanvas-form {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.form-label {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.small-input {
+    width: 75%;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.large-input {
+    width: 85%;
+    height: 150px;
+    resize: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.submit-button {
+    height: 55px;
+    max-width: 90%;
+    align-self: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    
+}
