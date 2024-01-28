@@ -5,11 +5,12 @@ import Person from "../../../components/Landing/Person/Person";
 import ContactUs from "../../../components/Landing/ContactUs/ContactUs";
 import BottomBar from "../../../components/Landing/BottomBar/BottomBar";
 import TopBar from "../../../components/Landing/TopBar/TopBar";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import FirebaseInfo from "../../../../firebase-config";
 
 import styles from "./LandingPage.module.scss";
+import Header from "../../../components/Landing/Header/Header";
 
 function LandingPage() {
   const mission = useRef(null);
@@ -74,23 +75,8 @@ function LandingPage() {
         showContact={showContact}
         setContact={setShowContact}
       />
-
-      <div className={styles["backgroundDiv"]}>
-        <div className={styles["landingDiv"]}>
-          <h1 className={styles["titleText"]}>Fueling Dreams with STEM Tutoring and Rocketry</h1>
-          <div className={styles["startedDiv"]}>
-            <div className={styles["getStartedBox"]}>
-              <Link
-                to='/signup'
-                className={styles["startedText"]}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className={styles["separator2"]} />
+      <Header />
 
       <div
         ref={mission}
