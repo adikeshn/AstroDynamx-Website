@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./Auth.scss";
 import { Link } from "react-router-dom";
 import {
   onAuthStateChanged,
@@ -9,6 +8,8 @@ import {
 } from "firebase/auth";
 import FirebaseInfo from "../../../../firebase-config";
 import { useNavigate } from "react-router-dom";
+
+import styles from "./Auth.module.scss";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -58,11 +59,11 @@ function Login() {
   });
 
   return (
-    <div className='outsideClass'>
-      <div className='login-container'>
+    <div className={styles["outsideClass"]}>
+      <div className={styles["login-container"]}>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
-          <div className='form-group'>
+          <div className={styles["form-group"]}>
             <label htmlFor='username'>Email:</label>
             <input
               type='text'
@@ -71,7 +72,7 @@ function Login() {
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div className='form-group'>
+          <div className={styles["form-group"]}>
             <label htmlFor='password'>Password:</label>
             <input
               type='password'
@@ -80,37 +81,37 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className='logInButton'>
+          <div className={styles["logInButton"]}>
             <button type='submit'>Log in</button>
           </div>
         </form>
-        <div className='ForgotPassword'>
+        <div className={styles["ForgotPassword"]}>
           <Link to='/forgotpw'>
             <p>Forgot password?</p>
           </Link>
         </div>
         <div
-          className='GoogleButton'
+          className={styles["GoogleButton"]}
           onClick={googleSignin}
         >
-          <div className='GoogleGPlusSignIn'>
-            <div className='customBtn'>
+          <div className={styles["GoogleGPlusSignIn"]}>
+            <div className={styles["customBtn"]}>
               <img
-                className='icon'
+                className={styles["icon"]}
                 src='GoogleLogo2.png'
               />
-              <span className='buttonText'> Sign in with Google</span>
+              <span className={styles["buttonText"]}> Sign in with Google</span>
             </div>
           </div>
         </div>
-        <div className='wrongPage'>
+        <div className={styles["wrongPage"]}>
           <br />
           <Link to='/signup'>
-            <p>Don't have an account? Create one here!</p>
+            <p>Don&apos;t have an account? Create one here!</p>
           </Link>
         </div>
         {err != "" ? (
-          <div className='errText'>
+          <div className={styles["errText"]}>
             <span>{err}</span>
           </div>
         ) : null}

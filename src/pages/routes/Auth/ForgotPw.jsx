@@ -1,8 +1,9 @@
 import { useState } from "react";
-import "./Auth.scss";
 import { sendPasswordResetEmail } from "firebase/auth";
 import FirebaseInfo from "../../../../firebase-config";
 import { useNavigate } from "react-router-dom";
+
+import styles from "./Auth.module.scss";
 
 function ForgotPw() {
   const [username, setUsername] = useState("");
@@ -22,11 +23,11 @@ function ForgotPw() {
   };
 
   return (
-    <div className='outsideClass'>
-      <div className='login-container'>
+    <div className={styles["outsideClass"]}>
+      <div className={styles["login-container"]}>
         <h2>Enter your email to reset password</h2>
         <form onSubmit={handleSubmit}>
-          <div className='form-group'>
+          <div className={styles["form-group"]}>
             <label htmlFor='username'>Email:</label>
             <input
               type='text'
@@ -36,13 +37,13 @@ function ForgotPw() {
             />
           </div>
 
-          <div className='logInButton'>
+          <div className={styles["logInButton"]}>
             <button type='submit'>Reset Password</button>
           </div>
         </form>
 
         {err != "" ? (
-          <div className='errText'>
+          <div className={styles["errText"]}>
             <span>{err}</span>
           </div>
         ) : null}

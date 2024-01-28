@@ -1,4 +1,3 @@
-import "./LandingPage.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -9,6 +8,8 @@ import TopBar from "../../../components/Landing/TopBar/TopBar";
 import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import FirebaseInfo from "../../../../firebase-config";
+
+import styles from "./LandingPage.module.scss";
 
 function LandingPage() {
   const mission = useRef(null);
@@ -59,7 +60,7 @@ function LandingPage() {
   });
 
   return (
-    <div className='screen'>
+    <div className={styles["screen"]}>
       <TopBar
         shown={show}
         mission={mission}
@@ -74,14 +75,14 @@ function LandingPage() {
         setContact={setShowContact}
       />
 
-      <div className='backgroundDiv'>
-        <div className='landingDiv'>
-          <h1 className='titleText'>Fueling Dreams with STEM Tutoring and Rocketry</h1>
-          <div className='startedDiv'>
-            <div className='getStartedBox'>
+      <div className={styles["backgroundDiv"]}>
+        <div className={styles["landingDiv"]}>
+          <h1 className={styles["titleText"]}>Fueling Dreams with STEM Tutoring and Rocketry</h1>
+          <div className={styles["startedDiv"]}>
+            <div className={styles["getStartedBox"]}>
               <Link
                 to='/signup'
-                className='startedText'
+                className={styles["startedText"]}
               >
                 Get Started
               </Link>
@@ -89,25 +90,25 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className='separator2' />
+      <div className={styles["separator2"]} />
 
       <div
         ref={mission}
-        className='mission-bg'
+        className={styles["mission-bg"]}
       >
         <div
-          className='mission-text'
+          className={styles["mission-text"]}
           data-aos='fade-up'
         >
-          <h1 className='mission-title'>MISSION STATEMENT</h1>
-          <p className='mission-desc'>
+          <h1 className={styles["mission-title"]}>MISSION STATEMENT</h1>
+          <p className={styles["mission-desc"]}>
             Hey and welcome to AstroDynamX! We are a group of passionate high school students
             working to create a rocket that will reach space and make aerospace engineering more
             accessible to all. Doing this is hard and we know it&apos;s hard, but that is what makes
             it fulfilling. In a year when we have our rocket flying, you will thank yourself for
             putting in the work.
           </p>
-          <p className='mission-desc'>
+          <p className={styles["mission-desc"]}>
             Of course, we are very privileged, and it is important to give back to our community.
             That is why we are also creating teaching resources that will educate the next
             generation on STEM topics. Hopefully you stick with us on our mission. We&apos;d love to
@@ -115,23 +116,23 @@ function LandingPage() {
           </p>
         </div>
         <img
-          className='earth-image'
+          className={styles["earth-image"]}
           src='earth.png'
           alt=''
         />
       </div>
-      <div className='separator2' />
+      <div className={styles["separator2"]} />
 
       <div
         ref={team}
-        className='team-bg'
+        className={styles["team-bg"]}
       >
         <div
-          className='margin-content'
+          className={styles["margin-content"]}
           data-aos='fade-up'
         >
-          <h1 className='team-title'>Our Team</h1>
-          <div className='team-row'>
+          <h1 className={styles["team-title"]}>Our Team</h1>
+          <div className={styles["team-row"]}>
             <Person
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
@@ -147,7 +148,7 @@ function LandingPage() {
               }
             />
           </div>
-          <div className='team-row'>
+          <div className={styles["team-row"]}>
             <Person
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
@@ -163,7 +164,7 @@ function LandingPage() {
               }
             />
           </div>
-          <div className='team-row'>
+          <div className={styles["team-row"]}>
             <Person
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
@@ -182,7 +183,7 @@ function LandingPage() {
         </div>
       </div>
       <div
-        className='bottom-d'
+        className={styles["bottom-d"]}
         ref={involved}
       >
         <BottomBar />

@@ -1,6 +1,7 @@
-import Offcanvas from "react-bootstrap/Offcanvas";
-import "./ContactUs.scss";
 import { useState } from "react";
+import Offcanvas from "react-bootstrap/Offcanvas";
+
+import styles from "./ContactUs.module.scss";
 
 function ContactUs({ showContact, setContact }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +27,7 @@ function ContactUs({ showContact, setContact }) {
       },
       body: JSON.stringify(details),
     })
-      .then((response) => {
+      .then(() => {
         alert("Successfully sent message!");
         setIsLoading(false);
         e.target.reset();
@@ -57,43 +58,43 @@ function ContactUs({ showContact, setContact }) {
             If you have any questions regarding AstroDynamx, please type it in below, this message
             will be sent to astrodynamx@gmail.com and we will get back to you.
             <form
-              className='offCanvas-form'
+              className={styles["offCanvas-form"]}
               onSubmit={handleSubmit}
             >
               <label
                 id='name'
-                className='form-label'
+                className={styles["form-label"]}
               >
                 Name
               </label>
               <br />
               <input
-                className='small-input'
+                className={styles["small-input"]}
                 type='text'
                 id='name'
                 required
               />{" "}
               <br />
-              <label className='form-label'>Email </label>
+              <label className={styles["form-label"]}>Email </label>
               <br />
               <input
-                className='small-input'
+                className={styles["small-input"]}
                 type='email'
                 id='email'
                 required
               />{" "}
               <br />
-              <label className='form-label'>Message </label>
+              <label className={styles["form-label"]}>Message </label>
               <br />
               <textarea
-                className='large-input'
+                className={styles["large-input"]}
                 type='text'
                 id='message'
                 required
               />
               <br />
               <button
-                className='submit-button'
+                className={styles["submit-button"]}
                 type='submit'
                 style={{ cursor: isLoading ? "wait" : "pointer" }}
               >

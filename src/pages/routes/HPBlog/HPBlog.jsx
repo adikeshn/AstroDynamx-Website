@@ -1,9 +1,10 @@
-import "./HPBlog.scss";
 import TopBar from "../../../components/Home/TopBar/TopBar";
+
+import styles from "./HPBlog.module.scss";
 
 function HPBlog() {
   return (
-    <div className='blog-screen'>
+    <div className={styles["blog-screen"]}>
       <TopBar />
       Nothing here yet!
     </div>

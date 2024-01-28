@@ -1,14 +1,14 @@
-import "./Person.scss";
+import styles from "./Person.module.scss";
 
-function Person({ name, uri, desc }) {
+function Person({ name, desc }) {
   return (
-    <div className='person-div'>
+    <div className={styles["person-div"]}>
       <img
         src={"daddydonald.jpg"}
-        className='profile-img'
+        className={styles["profile-img"]}
       />
-      <span className='name-text'>{name}</span>
-      <div className='desc-text'>{desc}</div>
+      <span className={styles["name-text"]}>{name}</span>
+      <div className={styles["desc-text"]}>{desc}</div>
     </div>
   );
 }
