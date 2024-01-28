@@ -75,8 +75,8 @@ function LandingPage() {
         showContact={showContact}
         setContact={setShowContact}
       />
-      <div className={styles["separator2"]} />
       <Header />
+      <div className={styles["separator2"]} />
 
       <div
         ref={mission}
