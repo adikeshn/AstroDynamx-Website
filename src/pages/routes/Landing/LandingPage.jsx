@@ -11,6 +11,7 @@ import FirebaseInfo from "../../../../firebase-config";
 
 import styles from "./LandingPage.module.scss";
 import Header from "../../../components/Landing/Header/Header";
+import Mission from "../../../components/Landing/Mission/Mission";
 
 function LandingPage() {
   const mission = useRef(null);
@@ -70,45 +71,13 @@ function LandingPage() {
         contact={setShowContact}
         scrolltoSection={scrollToSection}
       />
-
       <ContactUs
         showContact={showContact}
         setContact={setShowContact}
       />
       <Header />
+      <Mission />
       <div className={styles["separator2"]} />
-
-      <div
-        ref={mission}
-        className={styles["mission-bg"]}
-      >
-        <div
-          className={styles["mission-text"]}
-          data-aos='fade-up'
-        >
-          <h1 className={styles["mission-title"]}>MISSION STATEMENT</h1>
-          <p className={styles["mission-desc"]}>
-            Hey and welcome to AstroDynamX! We are a group of passionate high school students
-            working to create a rocket that will reach space and make aerospace engineering more
-            accessible to all. Doing this is hard and we know it&apos;s hard, but that is what makes
-            it fulfilling. In a year when we have our rocket flying, you will thank yourself for
-            putting in the work.
-          </p>
-          <p className={styles["mission-desc"]}>
-            Of course, we are very privileged, and it is important to give back to our community.
-            That is why we are also creating teaching resources that will educate the next
-            generation on STEM topics. Hopefully you stick with us on our mission. We&apos;d love to
-            have your help!
-          </p>
-        </div>
-        <img
-          className={styles["earth-image"]}
-          src='earth.png'
-          alt=''
-        />
-      </div>
-      <div className={styles["separator2"]} />
-
       <div
         ref={team}
         className={styles["team-bg"]}

@@ -41,3 +41,9 @@
   max-width: 60%;
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 26.25em) {
+  .heading {
+    font-size: 3rem;
+  }
+}
