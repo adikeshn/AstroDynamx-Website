@@ -32,14 +32,7 @@
 
 }
 
-.mission-text {
-  color: white;
-  text-align: left;
-  max-width: 40%;
-  align-self: flex-end;
-  margin-right: 50px; 
-  max-height: 55%;
-}
+
 
 
 
@@ -62,24 +55,38 @@
 }
 
 .mission-title {
-  font-size: 5.3rem;
+  font-size: 11vmin;
+}
+
+.mission-text {
+  color: white;
+  text-align: left;
+  max-width: 50%;
+  max-height: 55%;
+  align-self: center;
+  margin-left: 50%;
 }
 
 .mission-desc {
   margin-top: 20px;
-  font-size: 1.2rem;
+  font-size: 2.5vmin;
   max-width: 90%;
 
 }
 
 .mission-bg {
-  height: 100%;
+  min-height: 100%;
+  height: fit-content;
   background-image: url('../../../public/stars-bg2.jpeg');
   background-size: cover;
   display: flex;
-  align-items: start;
-  justify-content: end;
-  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.earth-image {
+  height: 30%;
+  position: absolute;
 }
 
 
@@ -88,10 +95,10 @@
 }
 
 .titleText {
-  font-size: 4.3rem;
+  font-size: 9vmin;
   color: aliceblue;
   font-weight: 500;
-  max-width: 60%;
+  max-width: 70%;
   margin-bottom: 20px;
 }
 
@@ -151,9 +158,7 @@
 
 }
 
-.earth-image {
-  height: 30%;
-}
+
 
 /* overarching css */
 
@@ -217,6 +222,10 @@ html, body, #root {
   margin-right: 0px; 
   margin-top: 20px;
   max-height: 55%;
+  margin-left: 0%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
 }
 .margin-content {
   margin-top: 40px;
