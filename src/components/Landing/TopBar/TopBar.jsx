@@ -1,8 +1,9 @@
-import "./TopBar.scss";
 import { Link } from "react-router-dom";
 import { RiMenuFill } from "react-icons/ri";
 import { Offcanvas } from "react-bootstrap";
 import { useState } from "react";
+
+import styles from "./TopBar.module.scss";
 
 function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
@@ -13,12 +14,12 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
 
   const bar = () => {
     return (
-      <div className='selectorDiv'>
+      <div className={styles["selectorDiv"]}>
         <div
           onClick={() => {
             scrolltoSection(mission);
           }}
-          className='hover-underline-animation'
+          className={styles["hover-underline-animation"]}
         >
           Mission
         </div>
@@ -26,7 +27,7 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
           onClick={() => {
             scrolltoSection(team);
           }}
-          className='hover-underline-animation'
+          className={styles["hover-underline-animation"]}
         >
           Our Team
         </div>
@@ -34,7 +35,7 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
           onClick={() => {
             scrolltoSection(involved);
           }}
-          className='hover-underline-animation'
+          className={styles["hover-underline-animation"]}
         >
           Get Involved
         </div>
@@ -42,14 +43,14 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
           onClick={() => {
             contact(true);
           }}
-          className='hover-underline-animation'
+          className={styles["hover-underline-animation"]}
         >
           Contact Us
         </div>
-        <div className='signInBox'>
+        <div className={styles["signInBox"]}>
           <Link
             to='/login'
-            className='signInText'
+            className={styles["signInText"]}
           >
             Sign In
           </Link>
@@ -60,23 +61,25 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
 
   return (
     <>
-      <div className={shown ? "topBar" : "fadeOut"}>
+      <Link to='/'>
+        <div className={shown ? styles["topBar"] : styles["fadeOut"]}>
+          <img
+            className={styles["topbarLogo"]}
+            src='LogoSide2.png'
+          />
+          {bar()}
+        </div>
+      </Link>
+      <div className={styles["hamburger-icon"]}>
         <img
-          className='topbarLogo'
-          src='LogoSide2.png'
-        />
-        {bar()}
-      </div>
-      <div className='hamburger-icon'>
-        <img
-          className='topbarLogo2'
+          className={styles["topbarLogo2"]}
           src='LogoSide2.png'
         />
 
         <RiMenuFill
           size={46}
           color='white'
-          className='menuIcon'
+          className={styles["menuIcon"]}
           onClick={toggleSidebar}
         />
       </div>
