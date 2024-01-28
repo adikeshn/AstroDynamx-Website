@@ -1,5 +1,5 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
-import "../LandingPageStyles/contactUs.css";
+import "./ContactUs.scss";
 import { useState } from "react";
 
 function ContactUs({ showContact, setContact }) {
@@ -26,7 +26,7 @@ function ContactUs({ showContact, setContact }) {
       },
       body: JSON.stringify(details),
     })
-      .then(() => {
+      .then((response) => {
         alert("Successfully sent message!");
         setIsLoading(false);
         e.target.reset();
@@ -60,7 +60,12 @@ function ContactUs({ showContact, setContact }) {
               className='offCanvas-form'
               onSubmit={handleSubmit}
             >
-              <label className='form-label'>Name </label>
+              <label
+                id='name'
+                className='form-label'
+              >
+                Name
+              </label>
               <br />
               <input
                 className='small-input'

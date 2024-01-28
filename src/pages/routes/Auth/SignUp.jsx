@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./login.css";
+import "./Auth.scss";
+
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import FirebaseInfo from "../../firebase-config";
+import FirebaseInfo from "../../../../firebase-config";
 import { useNavigate } from "react-router-dom";
 
 function SignUp() {
@@ -68,59 +69,65 @@ function SignUp() {
   });
 
   return (
-    <div className="outsideClass">
-      <div className="login-container">
+    <div className='outsideClass'>
+      <div className='login-container'>
         <h2>Sign up</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="username">Email:</label>
+          <div className='form-group'>
+            <label htmlFor='username'>Email:</label>
             <input
-              type="text"
-              id="username"
+              type='text'
+              id='username'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password:</label>
+          <div className='form-group'>
+            <label htmlFor='password'>Password:</label>
             <input
-              type="password"
-              id="password"
+              type='password'
+              id='password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="verifyPassword">Verify Password:</label>
+          <div className='form-group'>
+            <label htmlFor='verifyPassword'>Verify Password:</label>
             <input
-              type="password"
-              id="verifyPassword"
+              type='password'
+              id='verifyPassword'
               value={verifyPassword}
               onChange={(e) => setVerifyPassword(e.target.value)}
             />
           </div>
 
-          <div className="logInButton">
-            <button type="submit">Sign Up</button>
+          <div className='logInButton'>
+            <button type='submit'>Sign Up</button>
           </div>
         </form>
-        <div className="GoogleButton" onClick={googleSignUp}>
+        <div
+          className='GoogleButton'
+          onClick={googleSignUp}
+        >
           <br />
-          <div className="GoogleGPlusSignIn">
-            <div className="customBtn">
-              <img className="icon" src="GoogleLogo2.png" />
-              <span className="buttonText"> Sign up with Google</span>
+          <div className='GoogleGPlusSignIn'>
+            <div className='customBtn'>
+              <img
+                className='icon'
+                src='GoogleLogo2.png'
+              />
+              <span className='buttonText'> Sign up with Google</span>
             </div>
           </div>
         </div>
-        <div className="wrongPage">
-          <Link to="/login">
+        <div className='wrongPage'>
+          <Link to='/login'>
             <br />
             <p>Already have an account? Sign in here</p>
           </Link>
         </div>
         {errorMessage != "" ? (
-          <div className="errText">
+          <div className='errText'>
             <span>{errorMessage}</span>
           </div>
         ) : null}

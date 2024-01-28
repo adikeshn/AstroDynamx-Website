@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./login.css";
+import { useState, useEffect } from "react";
+import "./Auth.scss";
 import { Link } from "react-router-dom";
 import {
   onAuthStateChanged,
@@ -7,7 +7,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import FirebaseInfo from "../../firebase-config";
+import FirebaseInfo from "../../../../firebase-config";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -58,53 +58,59 @@ function Login() {
   });
 
   return (
-    <div className="outsideClass">
-      <div className="login-container">
+    <div className='outsideClass'>
+      <div className='login-container'>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="username">Email:</label>
+          <div className='form-group'>
+            <label htmlFor='username'>Email:</label>
             <input
-              type="text"
-              id="username"
+              type='text'
+              id='username'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password:</label>
+          <div className='form-group'>
+            <label htmlFor='password'>Password:</label>
             <input
-              type="password"
-              id="password"
+              type='password'
+              id='password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="logInButton">
-            <button type="submit">Log in</button>
+          <div className='logInButton'>
+            <button type='submit'>Log in</button>
           </div>
         </form>
-        <div className="ForgotPassword">
-          <Link to="/forgotpw">
+        <div className='ForgotPassword'>
+          <Link to='/forgotpw'>
             <p>Forgot password?</p>
           </Link>
         </div>
-        <div className="GoogleButton" onClick={googleSignin}>
-          <div className="GoogleGPlusSignIn">
-            <div className="customBtn">
-              <img className="icon" src="GoogleLogo2.png" />
-              <span className="buttonText"> Sign in with Google</span>
+        <div
+          className='GoogleButton'
+          onClick={googleSignin}
+        >
+          <div className='GoogleGPlusSignIn'>
+            <div className='customBtn'>
+              <img
+                className='icon'
+                src='GoogleLogo2.png'
+              />
+              <span className='buttonText'> Sign in with Google</span>
             </div>
           </div>
         </div>
-        <div className="wrongPage">
+        <div className='wrongPage'>
           <br />
-          <Link to="/signup">
+          <Link to='/signup'>
             <p>Don't have an account? Create one here!</p>
           </Link>
         </div>
         {err != "" ? (
-          <div className="errText">
+          <div className='errText'>
             <span>{err}</span>
           </div>
         ) : null}
