@@ -2,7 +2,8 @@ import { useState } from "react";
 import FirebaseInfo from "../../../../firebase-config";
 import { Link, useNavigate } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import "./TopBar.scss";
+
+import styles from "./TopBar.module.scss";
 
 function HPTopBar() {
   const navigate = useNavigate();
@@ -24,26 +25,26 @@ function HPTopBar() {
   };
 
   return (
-    <div className='top-screen'>
-      <div className='top-row-class'>
-        <div className='hello-text'>
+    <div className={styles["top-screen"]}>
+      <div className={styles["top-row-class"]}>
+        <div className={styles["hello-text"]}>
           <h1>
             Hello Person!
             <br />
           </h1>
         </div>
         <div
-          className={`account-dropdown-menu-container ${isOpen ? "show" : ""}`}
+          className={styles["menu-container"] + ` ${isOpen ? styles["show"] : ""}`}
           onMouseLeave={handleMouseLeave}
         >
-          <div className='account-dropdown-menu-trigger'>
+          <div className={styles["menu-trigger"]}>
             <button
               onClick={handleToggle}
               onMouseEnter={handleToggle}
             >
               My Account
               <RiArrowDropDownLine
-                className='dropdown-arrow'
+                className={styles["dropdown-arrow"]}
                 style={{
                   transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
                   transition: "transform 0.001s ease-in-out",
@@ -52,10 +53,10 @@ function HPTopBar() {
             </button>
           </div>
           {isOpen && (
-            <div className='account-dropdown-menu-items'>
-              <div className='account-menu-add-class-button'>
+            <div className={styles["menu-items"]}>
+              <div className={styles["add-class-button"]}>
                 <a
-                  className='account-menu-add-class-link'
+                  className={styles["add-class-link"]}
                   href='https://docs.google.com/forms/d/e/1FAIpQLSeer3eGO5dAdOpEoN02hY01ZdAjjIjr6XrIWtWIx4MtrV4k6g/viewform?usp=sf_link'
                   target='_blank'
                   rel='noopener noreferrer'
@@ -63,27 +64,27 @@ function HPTopBar() {
                   Add Class
                 </a>
               </div>
-              <div className='logout-button'>
+              <div className={styles["logout-button"]}>
                 <button onClick={signout}>Log out</button>
               </div>
             </div>
           )}
         </div>
       </div>
-      <div className='links-class'>
+      <div className={styles["links-class"]}>
         <Link to='/home'>
-          <div className='text'>
-            <div className='classes'>Classes</div>
+          <div className={styles["text"]}>
+            <div className={styles["classes"]}>Classes</div>
           </div>
         </Link>
         <Link to='/home/blog'>
-          <div className='text'>
-            <div className='other'>Blog</div>
+          <div className={styles["text"]}>
+            <div className={styles["other"]}>Blog</div>
           </div>
         </Link>
         <Link to='/home/forum'>
-          <div className='text'>
-            <div className='other'>Forum</div>
+          <div className={styles["text"]}>
+            <div className={styles["other"]}>Forum</div>
           </div>
         </Link>
       </div>
