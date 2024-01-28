@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import FirebaseInfo from "../../../firebase-config";
 import { Link, useNavigate } from "react-router-dom";
-import {RiArrowDropDownLine} from "react-icons/ri";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import "../HomePageStyleSheets/HPTopBar.css";
 
 function HPTopBar() {
-    const navigate = useNavigate();
-    const [isOpen, setIsOpen] = useState(false);
-    const [isRotated, setIsRotated] = useState(false);
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
 
   const signout = async () => {
     await FirebaseInfo.auth.signOut();
@@ -21,21 +21,34 @@ function HPTopBar() {
   const handleMouseLeave = () => {
     setIsOpen(false);
     setIsRotated(!isRotated);
+    console.log(FirebaseInfo.auth.currentUser.displayName);
   };
 
   return (
     <div className="top-screen">
       <div className="top-row-class">
         <div className="hello-text">
-          <h1>Hello Person!<br /></h1>
+          <h1>
+            Hello{" "}
+            {FirebaseInfo.auth.currentUser.displayName != null
+              ? FirebaseInfo.auth.currentUser.displayName
+              : FirebaseInfo.auth.currentUser.email}
+            !
+            <br />
+          </h1>
         </div>
-        <div className={`account-dropdown-menu-container ${isOpen ? 'show' : ''}` } onMouseLeave={handleMouseLeave}>
+        <div
+          className={`account-dropdown-menu-container ${isOpen ? "show" : ""}`}
+          onMouseLeave={handleMouseLeave}
+        >
           <div className="account-dropdown-menu-trigger">
-            <button onClick={handleToggle} onMouseEnter={handleToggle}>My Account 
-              <RiArrowDropDownLine className="dropdown-arrow" 
+            <button onClick={handleToggle} onMouseEnter={handleToggle}>
+              My Account
+              <RiArrowDropDownLine
+                className="dropdown-arrow"
                 style={{
-                  transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                  transition: 'transform 0.001s ease-in-out',
+                  transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  transition: "transform 0.001s ease-in-out",
                 }}
               />
             </button>
@@ -43,7 +56,11 @@ function HPTopBar() {
           {isOpen && (
             <div className="account-dropdown-menu-items">
               <div className="account-menu-add-class-button">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeer3eGO5dAdOpEoN02hY01ZdAjjIjr6XrIWtWIx4MtrV4k6g/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeer3eGO5dAdOpEoN02hY01ZdAjjIjr6XrIWtWIx4MtrV4k6g/viewform?usp=sf_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Add Class
                 </a>
               </div>
@@ -75,7 +92,7 @@ function HPTopBar() {
   );
 }
 
-function DropdownMenuItem(){
+function DropdownMenuItem() {
   return (
     <li>
       <a> {props.text} </a>
