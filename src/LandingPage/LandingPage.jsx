@@ -43,6 +43,10 @@ function LandingPage() {
   }, [lastScrollY]);
 
   useEffect(() => {
+    AOS.init();
+  });
+
+  useEffect(() => {
     const moniterAuthState = () => {
       onAuthStateChanged(FirebaseInfo.auth, (users) => {
         if (users) {
@@ -51,10 +55,6 @@ function LandingPage() {
       });
     };
     moniterAuthState();
-  });
-
-  useEffect(() => {
-    AOS.init();
   });
 
   return (
