@@ -58,7 +58,7 @@ function LandingPage() {
   });
 
   return (
-    <div className="screen">
+    <div className='screen'>
       <TopBar
         shown={show}
         mission={mission}
@@ -68,23 +68,28 @@ function LandingPage() {
         scrolltoSection={scrollToSection}
       />
 
-      <ContactUs showContact={showContact} setContact={setShowContact} />
+      <ContactUs
+        showContact={showContact}
+        setContact={setShowContact}
+      />
 
-      <div className="backgroundDiv">
-        <div className="landingDiv">
-          <h1 className="titleText">
-            Fueling Dreams with STEM Tutoring and Rocketry
-          </h1>
-          <div className="startedDiv">
-            <div className="getStartedBox">
-              <Link to="/signup" className="startedText">
+      <div className='backgroundDiv'>
+        <div className='landingDiv'>
+          <h1 className='titleText'>Fueling Dreams with STEM Tutoring and Rocketry</h1>
+          <div className='startedDiv'>
+            <div className='getStartedBox'>
+              <Link
+                to='/signup'
+                className='startedText'
+              >
                 Get Started
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="separator2" />
+      <div className='separator2' />
+
 
       <div ref={mission} className="mission-bg">
         <div className="mission-text" data-aos="fade-up">
@@ -97,22 +102,31 @@ function LandingPage() {
             a year when we have our rocket flying, you will thank yourself for
             putting in the work.
           </p>
-          <p className="mission-desc">
-            Of course, we are very privileged, and it is important to give back
-            to our community. That is why we are also creating teaching
-            resources that will educate the next generation on STEM topics.
-            Hopefully you stick with us on our mission. We'd love to have your
-            help!
+          <p className='mission-desc'>
+            Of course, we are very privileged, and it is important to give back to our community.
+            That is why we are also creating teaching resources that will educate the next
+            generation on STEM topics. Hopefully you stick with us on our mission. We'd love to have
+            your help!
           </p>
         </div>
-        <img className="earth-image" src="earth.png" alt="" />
+        <img
+          className='earth-image'
+          src='earth.png'
+          alt=''
+        />
       </div>
-      <div className="separator2" />
+      <div className='separator2' />
 
-      <div ref={team} className="team-bg">
-        <div className="margin-content" data-aos="fade-up">
-          <h1 className="team-title">Our Team</h1>
-          <div className="team-row">
+      <div
+        ref={team}
+        className='team-bg'
+      >
+        <div
+          className='margin-content'
+          data-aos='fade-up'
+        >
+          <h1 className='team-title'>Our Team</h1>
+          <div className='team-row'>
             <Person
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
@@ -127,8 +141,6 @@ function LandingPage() {
                 "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
               }
             />
-          </div>
-          <div className="team-row">
             <Person
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
@@ -144,7 +156,21 @@ function LandingPage() {
               }
             />
           </div>
-          <div className="team-row">
+          <div className='team-row'>
+            <Person
+              name={"Donald Trump, CEO"}
+              uri={"src/assets/daddydonald.jpeg"}
+              desc={
+                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+              }
+            />
+            <Person
+              name={"Donald Trump, CEO"}
+              uri={"src/assets/daddydonald.jpeg"}
+              desc={
+                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+              }
+            />
             <Person
               name={"Donald Trump, CEO"}
               uri={"src/assets/daddydonald.jpeg"}
@@ -162,7 +188,10 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="bottom-d" ref={involved}>
+      <div
+        className='bottom-d'
+        ref={involved}
+      >
         <BottomBar />
       </div>
     </div>

@@ -11,8 +11,7 @@ function BottomBar() {
   const handleClosePopup = (event) => {
     // Close the popup only if the click is outside the popup or the show button
     if (
-      (!event.target.closest(".popup") &&
-        !event.target.closest("#popup-button")) ||
+      (!event.target.closest(".popup") && !event.target.closest("#popup-button")) ||
       event.target.closest("#close-button")
     ) {
       setShowPopup(false);
@@ -36,37 +35,43 @@ function BottomBar() {
   }, []);
 
   return (
-    <div className="bottom-div">
-      <div className="get-involved">
-        <button id="popup-button" onClick={handleShowPopup}>
-          <span className="get-involved-text">Get Involved</span>
+    <div className='bottom-div'>
+      <div className='get-involved'>
+        <button
+          id='popup-button'
+          onClick={handleShowPopup}
+        >
+          <span className='get-involved-text'>Get Involved</span>
         </button>
         {showPopup && (
-          <div className="popup">
+          <div className='popup'>
             <h2>Join Us!</h2>
-            <div className="involved-text">
-              Send your resume to 
-              <a href="mailto:astrodynamx@gmail.com?subject=Applicaton"> astrodynamx@gmail.com!</a>
+            <div className='involved-text'>
+              Send your resume to
+              <a href='mailto:astrodynamx@gmail.com?subject=Applicaton'> astrodynamx@gmail.com!</a>
             </div>
-            <button id="close-button" onClick={handleClosePopup}>
+            <button
+              id='close-button'
+              onClick={handleClosePopup}
+            >
               &times;
             </button>
           </div>
         )}
       </div>
-      <div className="icon-div">
+      <div className='icon-div'>
         <RiInstagramLine
           size={46}
-          color="white"
+          color='white'
           onClick={() => {
             window.open("https://www.instagram.com/astrodynamx/", "_blank");
           }}
-          className="icon-cursor"
+          className='icon-cursor'
         />
         <RiLinkedinBoxLine
           size={46}
-          color="white"
-          className="icon-cursor"
+          color='white'
+          className='icon-cursor'
           onClick={() => {
             window.open(
               "https://www.linkedin.com/company/astrodynamx/about/?viewAsMember=true",
@@ -75,7 +80,7 @@ function BottomBar() {
           }}
         />
       </div>
-      <div className="space-corrcter"></div>
+      <div className='space-corrcter'></div>
     </div>
   );
 }
