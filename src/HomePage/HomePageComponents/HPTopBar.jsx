@@ -30,9 +30,11 @@ function HPTopBar() {
         <div className="hello-text">
           <h1>
             Hello{" "}
-            {FirebaseInfo.auth.currentUser.displayName != null
-              ? FirebaseInfo.auth.currentUser.displayName
-              : FirebaseInfo.auth.currentUser.email}
+            {FirebaseInfo.auth.currentUser != null
+              ? FirebaseInfo.auth.currentUser.displayName != null
+                ? FirebaseInfo.auth.currentUser.displayName
+                : FirebaseInfo.auth.currentUser.email
+              : null}
             !
             <br />
           </h1>

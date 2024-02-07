@@ -44,57 +44,48 @@ function ContactUs({ showContact, setContact }) {
         setContact(false);
       }}
       scroll={true}
+      backdrop={true}
     >
-      <div className="offCanvas-bg">
-        <Offcanvas.Header closeButton closeVariant="white">
-          <Offcanvas.Title>Contact Us</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <div>
-            If you have any questions regarding AstroDynamx, please type it in
-            below, this message will be sent to astrodynamx@gmail.com and we
-            will get back to you.
-            <form className="offCanvas-form" onSubmit={handleSubmit}>
-              <label id="name" className="form-label">
-                Name
-              </label>
-              <br />
-              <input
-                className="small-input"
-                type="text"
-                id="name"
-                required
-              />{" "}
-              <br />
-              <label className="form-label">Email </label>
-              <br />
-              <input
-                className="small-input"
-                type="email"
-                id="email"
-                required
-              />{" "}
-              <br />
-              <label className="form-label">Message </label>
-              <br />
-              <textarea
-                className="large-input"
-                type="text"
-                id="message"
-                required
-              />
-              <br />
-              <button
-                className="submit-button"
-                type="submit"
-                style={{ cursor: isLoading ? "wait" : "pointer" }}
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-        </Offcanvas.Body>
-      </div>
+      <Offcanvas.Header
+        closeButton
+        closeVariant="white"
+        className="offCanvas-bg"
+      >
+        <Offcanvas.Title>Contact Us</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body className="offCanvas-bg">
+        If you have any questions regarding AstroDynamx, please type it in
+        below, this message will be sent to astrodynamx@gmail.com and we will
+        get back to you.
+        <form className="offCanvas-form" onSubmit={handleSubmit}>
+          <label id="name" className="form-label">
+            Name
+          </label>
+          <br />
+          <input className="small-input" type="text" id="name" required />{" "}
+          <br />
+          <label className="form-label">Email </label>
+          <br />
+          <input
+            className="small-input"
+            type="email"
+            id="email"
+            required
+          />{" "}
+          <br />
+          <label className="form-label">Message </label>
+          <br />
+          <textarea className="large-input" type="text" id="message" required />
+          <br />
+          <button
+            className="submit-button"
+            type="submit"
+            style={{ cursor: isLoading ? "wait" : "pointer" }}
+          >
+            Submit
+          </button>
+        </form>
+      </Offcanvas.Body>
     </Offcanvas>
   );
 }

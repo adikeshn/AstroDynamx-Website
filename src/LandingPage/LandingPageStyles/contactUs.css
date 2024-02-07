@@ -1,9 +1,8 @@
-.offCanvas-bg {
+
+  .offCanvas-bg{
     background-color: rgb(20, 20, 20);
     color: whitesmoke;
-    height: 100%;
   }
-
 .offCanvas-form {
     margin-top: 40px;
     width: 100%;

@@ -43,6 +43,10 @@ function LandingPage() {
   }, [lastScrollY]);
 
   useEffect(() => {
+    AOS.init();
+  });
+
+  useEffect(() => {
     const moniterAuthState = () => {
       onAuthStateChanged(FirebaseInfo.auth, (users) => {
         if (users) {
@@ -51,10 +55,6 @@ function LandingPage() {
       });
     };
     moniterAuthState();
-  });
-
-  useEffect(() => {
-    AOS.init();
   });
 
   return (
@@ -90,20 +90,16 @@ function LandingPage() {
       </div>
       <div className='separator2' />
 
-      <div
-        ref={mission}
-        className='mission-bg'
-      >
-        <div
-          className='mission-text'
-          data-aos='fade-up'
-        >
-          <h1 className='mission-title'>MISSION STATEMENT</h1>
-          <p className='mission-desc'>
-            Hey and welcome to AstroDynamX! We are a group of passionate high school students
-            workings to create a rocket that will reach space and make aerospace engineering more
-            accessible to all. Doing this is hard and we know it's hard, but that is what makes it
-            fulfilling. In a year when we have our rocket flying, you will thank yourself for
+
+      <div ref={mission} className="mission-bg">
+        <div className="mission-text" data-aos="fade-up">
+          <h1 className="mission-title">MISSION STATEMENT</h1>
+          <p className="mission-desc">
+            Hey and welcome to AstroDynamX! We are a group of passionate high
+            school students working to create a rocket that will reach space and
+            make aerospace engineering more accessible to all. Doing this is
+            hard and we know it's hard, but that is what makes it fulfilling. In
+            a year when we have our rocket flying, you will thank yourself for
             putting in the work.
           </p>
           <p className='mission-desc'>
