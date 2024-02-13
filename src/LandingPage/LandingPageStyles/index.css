@@ -155,9 +155,11 @@
   margin-left: 15px;
   margin-right: 15px;
   text-decoration: none;
-
 }
 
+.team-row li{
+  width: fit-content;
+}
 
 
 /* overarching css */
@@ -197,8 +199,8 @@ html, body, #root {
   .mission-desc {
     font-size: 0.9rem;
     max-width: 90%;
-  
   }
+
   .earth-image {
     width: 0%;
   }
@@ -214,52 +216,45 @@ html, body, #root {
   }
 
   .mission-text {
-  color: white;
-  text-align: left;
-  max-width: 90%;
+    color: white;
+    text-align: left;
+    max-width: 90%;
+    align-self: center;
+    margin-right: 0px; 
+    margin-top: 20px;
+    max-height: 55%;
+    margin-left: 0%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .margin-content {
+    margin-top: 40px;
+  }
 
-  align-self: center;
-  margin-right: 0px; 
-  margin-top: 20px;
-  max-height: 55%;
-  margin-left: 0%;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  .team-bg {
+    height:max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
 
-}
-.margin-content {
-  margin-top: 40px;
-}
+  .team-title {
+    font-size: 4.3rem;
+    color: white;
+    font-weight:500;
+  }
 
-.team-bg {
-  height:max-content;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-}
+  .team-row {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: fit-content;
+    justify-content: space-evenly;
+  }
 
-
-
-.team-title {
-  font-size: 4.3rem;
-  color: white;
-  font-weight:500;
-}
-
-.team-row {
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  height: fit-content;
-  justify-content: space-evenly;
-
-}
-
-.bottom-d {
-  height: 10%;
-}
-
-
+  .bottom-d {
+    height: 10%;
+  }
 }

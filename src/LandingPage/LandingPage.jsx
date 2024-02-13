@@ -128,61 +128,83 @@ function LandingPage() {
           <h1 className='team-title'>Our Team</h1>
           <div className='team-row'>
             <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
+              name={"Adi Jha, CEO"}
+              uri={"Adi.png"}
               desc={
-                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                <ul>
+                  Junior at West Windsor Plainsboro High School North
+                  <li>Top 10 at Science Olympiad Nationals</li>
+                  <li>Studied relativity at Columbia University</li>
+                  <li>Engineer on MidKnight Inventors</li>
+                  <li>Studying Multivariable Calculus and College Physics</li>
+                </ul>
               }
-            />
+              />
             <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
+              name={"Charlie Xiang, COO"}
+              uri={"Charlie.png"}
               desc={
-                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                <ul>
+                  Junior at West Windsor Plainsboro High School North
+                  <li>AIME Qualifier</li>
+                  <li>AMC 10 Honor Roll</li>
+                  <li>Researched applications of dMRI at the University of Illinois at Chicago</li>
+                  <li>Varsity Tennis First Singles</li>
+                </ul>
               }
-            />
+              />
             <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
+              name={"Arav Gupta, CTO"}
+              uri={"Arav.png"}
               desc={
-                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                <ul>
+                  Junior at West Windsor Plainsboro High School North
+                  <li>Recently moved in from Singapore</li>
+                  <li>Top 10 in National Junior Biology Olympiad</li>
+                  <li>Studied college level STEM courses</li>
+                  <li>Gold, Silver in Chemistry, Physics Olympiads</li>
+                  <li>International Space Challenge Distinction winner</li>
+                </ul>
               }
-            />
-            <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
-              desc={
-                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
-              }
-            />
+              />
           </div>
           <div className='team-row'>
             <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
+              name={"Jonathan Tang, CFO"}
+              uri={"Jonathan.jpeg"}
               desc={
-                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                <ul>
+                  Junior at West Windsor Plainsboro High School North
+                  <li>Studied business & entrepreneurship at Columbia University</li>
+                  <li>Researched aerospace and mechanical engineering at Rutgers</li>
+                  <li>Varsity Basketball Player</li>
+                  <li>Studying college physics</li>
+                </ul>
               }
-            />
+              />
             <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
+              name={"Aldric Benalan, CAO"}
+              uri={"Aldric.png"}
               desc={
-                "Through a commitment to excellence and a passion for continuous improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                <ul>
+                  Sophomore at West Windsor Plainsboro High School North
+                  <li>Placed 6th place nationally in the Science Olympiad Astronomy event</li>
+                  <li>2x champion of National Science Bee</li>
+                  <li>USA Biology Olympiad Semifinalist</li>
+                </ul>
               }
-            />
+              />
             <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
+              name={"Akanksha Bagchi, CMO"}
+              uri={"Akanksha.png"}
               desc={
-                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
-              }
-            />
-            <Person
-              name={"Donald Trump, CEO"}
-              uri={"src/assets/daddydonald.jpeg"}
-              desc={
-                "Through a commitment to excellence and a passion for continuou improvement, we aim to be a trusted resource that inspires, educates, and transforms the way our community engages with theworld."
+                <ul>
+                  Freshman at West Windsor Plainsboro High School North
+                  <li>Top 10 at Science Olympiad Nationals</li>
+                  <li>Studied relativity at Columbia University</li>
+                  <li>Engineer on MidKnight Inventors</li>
+                  <li>Studying Multivariable Calculus and College Physics</li>
+                </ul>
               }
             />
           </div>

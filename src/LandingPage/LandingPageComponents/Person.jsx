@@ -13,7 +13,7 @@ function Person({ name, uri, desc }) {
         }}
       >
         <img
-          src={"daddydonald.jpg"}
+          src={uri}
           className='profile-img'
         />
         <span className='name-text'>{name}</span>
@@ -37,7 +37,7 @@ function Person({ name, uri, desc }) {
               <span className='person-modal-desc'>{desc}</span>
             </div>
             <img
-              src={"daddydonald.jpg"}
+              src={uri}
               className='person-modal-img'
             />
           </div>
