@@ -88,6 +88,3 @@ function TopBar({ shown, mission, team, contact, scrolltoSection, involved }) {
 }
 
 export default TopBar;
-
-//Replace my account with logout or finish dropdown menu
-//Delete blog and forum links in the navbar
